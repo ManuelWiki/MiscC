@@ -27,7 +27,7 @@ public:
 };
 
 template <class R, class... A>
-class Function_Specializer { using type = Function_BaseType<R, A...>; };
+class Function_Specializer { public: using type = Function_BaseType<R, A...>; };
 template <class R, class... A>
 class Function_Specializer<R(A...)> { public: using type = Function_BaseType<R, A...>; };
 
